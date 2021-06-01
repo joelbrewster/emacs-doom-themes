@@ -175,8 +175,9 @@ determine the exact padding."
    ;;;; org <built-in>
    (org-link :foreground cyan :underline t)
    ((org-block &override) :background base0)
-   ((org-block-begin-line &override) :foreground base4 :background base1)
-   ((org-block-end-line &override) :foreground base4 :background base1)
+   (org-done :foreground base2)
+   ((org-block-begin-line &override) :foreground base5 :background (doom-lighten base0 0.1))
+   ((org-block-end-line &override) :foreground base5 :background (doom-lighten base0 0.1))
    ;;;; rjsx-mode
    (rjsx-tag :foreground red)
    (rjsx-attr :foreground orange)
