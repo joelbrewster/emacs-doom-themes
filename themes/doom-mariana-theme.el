@@ -174,9 +174,9 @@ determine the exact padding."
    (vertico-current :background base1 :foreground yellow)
    ;;;; org <built-in>
    (org-link :foreground cyan :underline t)
-   ((org-block &override) :background bg-alt)
-   ((org-block-begin-line &override) :foreground comments :background base1)
-   ((org-block-end-line &override) :foreground comments :background base1)
+   ((org-block &override) :background base0)
+   ((org-block-begin-line &override) :foreground base4 :background base1)
+   ((org-block-end-line &override) :foreground base4 :background base1)
    ;;;; rjsx-mode
    (rjsx-tag :foreground red)
    (rjsx-attr :foreground orange)
