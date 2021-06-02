@@ -143,8 +143,10 @@ determine the exact padding."
    (company-tooltip-selection :background bg-alt)
    (company-tooltip-mouse :background bg-alt :foreground nil)
    ;;;; magit
-   (magit-diff-removed :foreground red :background (doom-blend red bg 0.05))
-   (magit-diff-removed-highlight :foreground red :background (doom-blend red bg 0.2))
+   (magit-diff-removed :background (doom-blend red bg 0.05) :foreground red)
+   (magit-diff-removed-highlight :background (doom-blend red bg 0.2) :foreground red)
+   (magit-diff-context :background bg :foreground (doom-darken fg 0.4) :extend t)
+   (magit-diff-context-highlight :background base1 :foreground fg :extend t)
    ;;;; dired
    (dired-directory :foreground cyan)
    ;;;; css-mode <built-in> / scss-mode
