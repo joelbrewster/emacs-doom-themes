@@ -154,7 +154,7 @@ determine the exact padding."
    (css-property :foreground blue)
    (css-selector :foreground magenta)
    ;;;; doom-modeline
-   (doom-modeline-bar :background (if -modeline-bright modeline-bg highlight))
+   (doom-modeline-bar :background yellow)
    (doom-modeline-buffer-file :inherit 'mode-line-buffer-id :weight 'bold)
    (doom-modeline-buffer-path :inherit 'mode-line-emphasis :weight 'bold)
    (doom-modeline-buffer-project-root :foreground green :weight 'bold)
