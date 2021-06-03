@@ -143,17 +143,17 @@ determine the exact padding."
    (company-tooltip-selection :background bg-alt)
    (company-tooltip-mouse :background bg-alt :foreground nil)
    ;;;; magit
+   (magit-diff-context  :background base0 :foreground (doom-darken fg 0.4) :extend t)
+   (magit-diff-context-highlight :background base1 :foreground fg :extend t)
    (magit-diff-removed :background (doom-blend red bg 0.05) :foreground red)
    (magit-diff-removed-highlight :background (doom-blend red bg 0.2) :foreground red)
-   (magit-diff-context :background bg :foreground (doom-darken fg 0.4) :extend t)
-   (magit-diff-context-highlight :background base1 :foreground fg :extend t)
    ;;;; dired
    (dired-directory :foreground cyan)
    ;;;; css-mode <built-in> / scss-mode
-   (css-proprietary-property :foreground cyan)
    (css-font-lock-keywords :foreground violet)
-   (css-property-ids :foreground magenta)
    (css-property :foreground blue)
+   (css-property-ids :foreground magenta)
+   (css-proprietary-property :foreground cyan)
    (css-selector :foreground magenta)
    ;;;; doom-modeline
    (doom-modeline-bar :background yellow)
@@ -175,11 +175,11 @@ determine the exact padding."
    ;;;; vertico
    (vertico-current :background base1 :foreground yellow)
    ;;;; org <built-in>
-   (org-link :foreground cyan :underline t)
    ((org-block &override) :background base0)
-   (org-done :foreground base2)
    ((org-block-begin-line &override) :foreground base5 :background (doom-lighten base0 0.1))
    ((org-block-end-line &override) :foreground base5 :background (doom-lighten base0 0.1))
+   (org-done :foreground base2)
+   (org-link :foreground cyan :underline t)
    ;;;; rjsx-mode
    (rjsx-tag :foreground red)
    (rjsx-attr :foreground orange)
