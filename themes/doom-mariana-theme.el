@@ -150,6 +150,9 @@ determine the exact padding."
    ;;;; smerge
    (smerge-lower :background (doom-blend green bg 0.05) :foreground green)
    (smerge-upper :background (doom-blend red bg 0.05) :foreground red)
+   ;;;; vc
+   (diff-removed :background (doom-blend red bg 0.05) :foreground red)
+   (diff-added :background (doom-blend green bg 0.05) :foreground green)
    ;;;; dired
    (dired-directory :foreground cyan)
    ;;;; css-mode <built-in> / scss-mode
