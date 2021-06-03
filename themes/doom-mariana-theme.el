@@ -147,6 +147,9 @@ determine the exact padding."
    (magit-diff-context-highlight :background base1 :foreground fg :extend t)
    (magit-diff-removed :background (doom-blend red bg 0.05) :foreground red)
    (magit-diff-removed-highlight :background (doom-blend red bg 0.2) :foreground red)
+   ;;;; smerge
+   (smerge-lower :background (doom-blend green bg 0.05) :foreground green)
+   (smerge-upper :background (doom-blend red bg 0.05) :foreground red)
    ;;;; dired
    (dired-directory :foreground cyan)
    ;;;; css-mode <built-in> / scss-mode
