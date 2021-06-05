@@ -104,7 +104,6 @@ determine the exact padding."
    (modeline-bg-inactive   `(,(car bg-alt) ,@(cdr base1)))
    (modeline-bg-inactive-l `(,(doom-darken (car bg-alt) 0.1) ,@(cdr bg-alt))))
 
-
   ;;;; Base theme face overrides
   ((button :foreground cyan :underline t :weight 'bold)
    (cursor :background orange)
@@ -123,7 +122,15 @@ determine the exact padding."
     :background modeline-bg-inactive :foreground modeline-fg-alt
     :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-inactive)))
    (mode-line-emphasis :foreground (if -modeline-bright base2 highlight))
-    ;;;; rainbow-delimiters
+
+   ;;;; elfeed
+   (shr-link :foreground cyan)
+
+   ;;;; message <built-in>
+   (message-header-subject :foreground blue :weight 'bold)
+   (message-header-to :weight 'normal)
+
+   ;;;; rainbow-delimiters
    (rainbow-delimiters-depth-1-face :foreground cyan)
    (rainbow-delimiters-depth-2-face :foreground blue)
    (rainbow-delimiters-depth-3-face :foreground dark-blue)
@@ -133,9 +140,11 @@ determine the exact padding."
    (rainbow-delimiters-depth-7-face :foreground violet)
    (rainbow-delimiters-depth-8-face :foreground orange)
    (rainbow-delimiters-depth-9-face :foreground red)
+
    ;;;; show-paren <built-in>
    ((show-paren-match &override) :foreground nil :background base1 :bold t)
    ((show-paren-mismatch &override) :foreground nil :background "red")
+
    ;;;; company
    (company-preview-common :foreground cyan :background base0)
    (company-tooltip-common :foreground cyan :background base0)
@@ -146,53 +155,67 @@ determine the exact padding."
    (company-scrollbar-fg :background cyan)
    (company-tooltip-selection :background bg-alt)
    (company-tooltip-mouse :background bg-alt :foreground nil)
+
    ;;;; magit
    (magit-diff-context  :background base0 :foreground (doom-darken fg 0.4) :extend t)
    (magit-diff-context-highlight :background base1 :foreground fg :extend t)
+   (magit-header-line :background bg-alt :foreground cyan :weight 'bold :box `(:line-width 3 :color ,bg-alt))
    (magit-diff-removed :background (doom-blend red bg 0.05) :foreground red)
    (magit-diff-removed-highlight :background (doom-blend red bg 0.2) :foreground red)
+
    ;;;; smerge
    (smerge-lower :background (doom-blend green bg 0.05) :foreground green)
    (smerge-upper :background (doom-blend red bg 0.05) :foreground red)
+
    ;;;; vc
    (diff-removed :background (doom-blend red bg 0.05) :foreground red)
    (diff-added :background (doom-blend green bg 0.05) :foreground green)
+
    ;;;; dired
    (dired-directory :foreground cyan)
+
    ;;;; css-mode <built-in> / scss-mode
    (css-font-lock-keywords :foreground violet)
    (css-property :foreground blue)
    (css-property-ids :foreground magenta)
    (css-proprietary-property :foreground cyan)
    (css-selector :foreground magenta)
+
    ;;;; doom-modeline
    (doom-modeline-bar :background yellow)
+   (doom-modeline-bar-inactive :background bg)
    (doom-modeline-buffer-file :inherit 'mode-line-buffer-id :weight 'bold)
    (doom-modeline-buffer-path :inherit 'mode-line-emphasis :weight 'bold)
-   (doom-modeline-buffer-project-root :foreground green :weight 'bold)
+   (doom-modeline-buffer-project-root :foreground blue :weight 'bold)
+   (mode-line :background bg-alt :foreground (doom-lighten fg 0.25) :box (if -modeline-pad `(:line-width ,-modeline-pad :color base3)))
+   (mode-line-inactive :background base0 :foreground base4 :box (if -modeline-pad `(:line-width ,-modeline-pad :color base3)))
+
    ;;;; elscreen
    (elscreen-tab-other-screen-face :background "#353a42" :foreground "#1e2022")
+
    ;;;; markdown-mode
    (markdown-markup-face :foreground base3)
    (markdown-header-face :inherit 'bold :foreground blue)
    ((markdown-code-face &override) :background (doom-lighten bg 0.05))
+
    ;;;; ivy
    (ivy-current-match :background base2 :distant-foreground base0 :weight 'bold)
-   ;;;; elscreen
-   (elscreen-tab-other-screen-face :background "#353a42" :foreground "#1e2022")
-   ;;;; ivy
-   (ivy-current-match :background dark-blue :distant-foreground base0 :weight 'normal)
+
    ;;;; vertico
    (vertico-current :background base1 :foreground yellow)
+
    ;;;; org <built-in>
    ((org-block &override) :background base0)
    ((org-block-begin-line &override) :foreground base5 :background (doom-lighten base0 0.1))
    ((org-block-end-line &override) :foreground base5 :background (doom-lighten base0 0.1))
    (org-done :foreground base2)
    (org-link :foreground cyan :underline t)
+   (org-date-selected :background orange)
+
    ;;;; rjsx-mode
    (rjsx-tag :foreground red)
    (rjsx-attr :foreground orange)
+
    ;;;; solaire-mode
    (solaire-mode-line-face
     :inherit 'mode-line
