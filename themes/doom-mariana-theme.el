@@ -60,7 +60,7 @@ determine the exact padding."
    (dark-cyan  cyan)
 
    ;; face categories -- required for all themes
-   (highlight      base1)
+   (highlight      yellow)
    (vertical-bar   bg-alt)
    (selection      base1)
    (builtin        red)
