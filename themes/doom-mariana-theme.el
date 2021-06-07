@@ -211,6 +211,7 @@ determine the exact padding."
    (org-done :foreground base2)
    (org-link :foreground cyan :underline t)
    (org-date-selected :background orange)
+   (secondary-selection :background bg-alt)
 
    ;;;; rjsx-mode
    (rjsx-tag :foreground red)
